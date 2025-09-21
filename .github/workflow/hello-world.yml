@@ -1,16 +1,13 @@
-name : hello world pipeline
-on : 
-  push:
-    branches :
-      - main
-
+name: Hello World Workflow
+on:
+  push: null
+  branches:
+    - main
 jobs:
-  hello world :
-    runs-on : ubuntu-latest
-  
-    steps :
-      - name : checkout code
-        uses : actions/checkout@v3
-
-      - name : print hello world
-        run : echo "hello world" 
+  say-hello: null
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Print greeting
+      run: echo "👋 Hello, GitHub Actions!"
